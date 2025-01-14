@@ -1,0 +1,4 @@
+web3j generate solidity -b build/VotingContract.bin -a build/VotingContract.abi -o src -p com
+solc --abi --bin VotingContract.sol -o build/
+truffle compile --config truffle-config.js
+truffle migrate --network development

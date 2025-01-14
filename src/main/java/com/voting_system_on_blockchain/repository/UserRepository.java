@@ -1,0 +1,10 @@
+package com.voting_system_on_blockchain.repository;
+
+import com.voting_system_on_blockchain.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<User, Integer> {
+    Optional<User> findByUsername(String username);
+}
